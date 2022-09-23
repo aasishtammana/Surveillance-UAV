@@ -1,0 +1,22 @@
+cd Desktop\Object-Detector-master
+
+
+python gather_annotations.py -h
+
+
+
+python gather_annotations.py --dataset soccer/ --annotations annot.npy --images images.npy
+
+
+python train.py -h
+
+
+python train.py --annotations annot.npy --images images.npy --detector human_detector.svm
+
+
+python test.py -h
+
+
+
+
+python test.py --detector human_detector.svm --image therm.mp4 --annotate Human
